@@ -1,4 +1,4 @@
-import {Router} from "express";
+import {Router, Response } from "express";
 import {LoggerService} from "../logger/logger.service";
 import {IControllerRoute} from "./route.interface";
 
@@ -14,7 +14,7 @@ export abstract class BaseController {
     }
     public send<T>(res: Response, code: number, message: T) {
         res.type('application/json');
-        return res.status(code).join(message);
+        return res.status(code).json(message);
     }
 
     public ok<T>(res: Response, message: T) {
