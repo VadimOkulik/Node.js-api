@@ -5,3 +5,5 @@ export interface IControllerRoute {
     func: (req: Request, res: Response, next: NextFunction) => void;
     method: keyof Pick<Router, 'get' | 'put' | 'patch' | 'delete' | 'post'>
 }
+
+
