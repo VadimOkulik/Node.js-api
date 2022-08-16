@@ -10,10 +10,12 @@ export class UserController extends BaseController {
             {path: '/login', method: 'post', func: this.login},
         ])
     }
-    login(res: Response, req: Request, next: NextFunction) {
+    login(req: Request, res: Response, next: NextFunction) {
         this.ok(res, 'login');
     }
-    register(res: Response, req: Request, next: NextFunction) {
+    register(req: Request, res: Response, next: NextFunction) {
         this.ok(res, 'register');
     }
 }
+
+
